@@ -1,0 +1,15 @@
+
+myapp:
+  topic_name: Avengers
+
+spring:
+  kafka:
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest
+      group-id: Hydra
+
+      bootstrap-servers: localhost:9092
+    producer:
+      bootstrap-servers: localhost:9092
